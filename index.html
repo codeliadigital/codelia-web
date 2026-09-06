@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Codelia | Diseño y creación de páginas web para negocios</title>
+<meta name="description" content="Creamos la web de tu negocio y nos encargamos de todo lo técnico: diseño, marca, dominio y publicación. Cuéntanos tu proyecto sin compromiso.">
+<link rel="canonical" href="https://codeliadigital.com/">
+<meta name="theme-color" content="#F5F3EF">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Codelia">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://codeliadigital.com/">
+<meta property="og:title" content="Codelia | Diseño y creación de páginas web para negocios">
+<meta property="og:description" content="Creamos la web de tu negocio y nos encargamos de todo lo técnico: diseño, marca, dominio y publicación. Cuéntanos tu proyecto sin compromiso.">
+<meta property="og:image" content="https://codeliadigital.com/img/og-codelia.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo de Codelia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Codelia | Diseño y creación de páginas web para negocios">
+<meta name="twitter:description" content="Creamos la web de tu negocio y nos encargamos de todo lo técnico: diseño, marca, dominio y publicación.">
+<meta name="twitter:image" content="https://codeliadigital.com/img/og-codelia.png">
+
+<link rel="preload" href="fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('con-js');</script>
+</head>
+
+<body>
+<a class="salta-al-contenido" href="#contenido">Saltar al contenido</a>
+
+<!-- ===================== Cabecera ===================== -->
+<header class="cabecera" id="cabecera">
+  <div class="contenedor cabecera__interior">
+
+    <a class="marca" href="index.html">
+      <img src="img/codelia-icono.webp" width="35" height="32" alt="" loading="eager" decoding="async">
+      <span>codelia</span>
+    </a>
+
+    <button class="hamburguesa" id="hamburguesa" type="button"
+            aria-label="Abrir el menú" aria-expanded="false" aria-controls="navegacion">
+      <span class="hamburguesa__barras"></span>
+    </button>
+
+    <nav class="navegacion" id="navegacion" aria-label="Menú principal">
+      <ul class="navegacion__lista">
+        <li><a class="navegacion__enlace" href="#servicios">Servicios</a></li>
+        <li><a class="navegacion__enlace" href="#como-trabajamos">Cómo trabajamos</a></li>
+        <li><a class="navegacion__enlace" href="trabajos.html">Trabajos</a></li>
+        <li><a class="navegacion__enlace" href="#contacto">Contacto</a></li>
+      </ul>
+      <a class="boton boton--principal" href="#contacto">Cuéntanos tu proyecto</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ===================== 1. Portada ===================== -->
+  <section class="portada">
+
+    <svg class="portada__adorno" viewBox="0 0 1400 520" fill="none" aria-hidden="true" focusable="false">
+      <g stroke="#A8D5E8" stroke-width="1" opacity=".55">
+        <path d="M120 430 L300 300 L470 356 L640 190 L830 250 L1010 120 L1190 210 L1330 96"/>
+        <path d="M300 300 L340 118 L640 190"/>
+        <path d="M470 356 L560 470 L830 250"/>
+        <path d="M1010 120 L1090 350 L1190 210"/>
+      </g>
+      <g fill="#A8D5E8" opacity=".75">
+        <circle cx="120" cy="430" r="4"/><circle cx="300" cy="300" r="5"/>
+        <circle cx="340" cy="118" r="4"/><circle cx="470" cy="356" r="4"/>
+        <circle cx="560" cy="470" r="4"/><circle cx="640" cy="190" r="5"/>
+        <circle cx="830" cy="250" r="4"/><circle cx="1010" cy="120" r="5"/>
+        <circle cx="1090" cy="350" r="4"/><circle cx="1190" cy="210" r="4"/>
+        <circle cx="1330" cy="96" r="4"/>
+      </g>
+    </svg>
+
+    <div class="contenedor portada__interior">
+      <img class="portada__logo" src="img/codelia-logo.webp" width="614" height="427"
+           alt="Codelia" loading="eager" decoding="async" fetchpriority="high">
+
+      <h1 class="portada__titular">Llevamos tu negocio a internet.</h1>
+
+      <p class="portada__apoyo">
+        Diseñamos tu web, tu marca y nos encargamos de toda la parte técnica.
+        Tú solo te preocupas de lo tuyo.
+      </p>
+
+      <div class="portada__botones">
+        <a class="boton boton--principal" href="#contacto">Cuéntanos tu proyecto</a>
+        <a class="boton boton--secundario" href="trabajos.html">Ver trabajos</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== 2. Por qué importa ===================== -->
+  <section class="seccion" id="por-que">
+    <div class="contenedor">
+
+      <div class="aparece">
+        <span class="antetitulo">Por qué importa</span>
+        <h2 class="titular-seccion">Hoy, el negocio que no aparece en el móvil no existe.</h2>
+        <p class="entradilla">
+          Antes de entrar en un sitio, pedir un presupuesto o reservar una mesa, casi todo el mundo
+          lo busca primero en el móvil. Si no encuentran nada tuyo, encuentran a otro.
+        </p>
+      </div>
+
+      <div class="rejilla-2">
+
+        <article class="tarjeta aparece">
+          <h3 class="tarjeta__titulo">Te buscan antes de decidir</h3>
+          <p class="tarjeta__texto">
+            Reseñas, horarios, precios, fotos. La decisión de entrar o no entrar en tu negocio
+            se toma mirando una pantalla, y se toma antes de llegar a tu puerta.
+          </p>
+        </article>
+
+        <article class="tarjeta aparece">
+          <h3 class="tarjeta__titulo">Te encuentran los que aún no te conocen</h3>
+          <p class="tarjeta__texto">
+            Quien está de paso, acaba de mudarse o viene de fuera no sabe que existes.
+            Busca en el móvil, muchas veces en otro idioma, y elige entre lo que le sale.
+            Si no estás, no te elige.
+          </p>
+        </article>
+
+        <article class="tarjeta aparece">
+          <h3 class="tarjeta__titulo">Tu web es tuya. Las redes no</h3>
+          <p class="tarjeta__texto">
+            En redes sociales dependes de un algoritmo que decide quién te ve y quién no.
+            Tu web está siempre ahí, aparece en Google y trabaja para ti las veinticuatro horas.
+          </p>
+        </article>
+
+        <article class="tarjeta aparece">
+          <h3 class="tarjeta__titulo">Da confianza</h3>
+          <p class="tarjeta__texto">
+            Un negocio con una web cuidada transmite que va en serio. Y esa impresión se forma
+            en los tres primeros segundos, antes de que hayan leído una sola palabra.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. Qué hacemos ===================== -->
+  <section class="seccion" id="servicios">
+    <div class="contenedor">
+
+      <div class="aparece">
+        <span class="antetitulo">Qué hacemos</span>
+        <h2 class="titular-seccion">Todo lo que hace falta para que tu negocio esté online.</h2>
+      </div>
+
+      <div class="rejilla-2">
+
+        <article class="tarjeta aparece">
+          <span class="tarjeta__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="2.75" y="4.25" width="18.5" height="15.5" rx="2.5"/>
+              <path d="M2.75 8.75h18.5"/>
+              <circle cx="6.1" cy="6.5" r=".7" fill="currentColor" stroke="none"/>
+              <circle cx="8.5" cy="6.5" r=".7" fill="currentColor" stroke="none"/>
+              <path d="M6.5 12.25h7M6.5 15.75h4.5"/>
+            </svg>
+          </span>
+          <h3 class="tarjeta__titulo">Páginas web para negocios</h3>
+          <p class="tarjeta__texto">
+            Tu web completa, desde el diseño hasta que está publicada y funcionando.
+            Pensada para tu negocio en concreto: no una plantilla con tu logo puesto encima.
+          </p>
+        </article>
+
+        <article class="tarjeta aparece">
+          <span class="tarjeta__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <circle cx="9" cy="9" r="5.25"/>
+              <path d="M13.4 12.1a5.25 5.25 0 1 0 0-6.2"/>
+              <path d="M4.5 19.5h15"/>
+            </svg>
+          </span>
+          <h3 class="tarjeta__titulo">Identidad de marca</h3>
+          <p class="tarjeta__texto">
+            Logo, colores y tipografía. Lo que hace que tu negocio se reconozca de un vistazo,
+            tanto en la web como en el escaparate o en una tarjeta.
+          </p>
+        </article>
+
+        <article class="tarjeta aparece">
+          <span class="tarjeta__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3 12h18"/>
+              <path d="M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3Z"/>
+            </svg>
+          </span>
+          <h3 class="tarjeta__titulo">Dominio y puesta en marcha</h3>
+          <p class="tarjeta__texto">
+            Nos ocupamos de toda la parte técnica: el dominio, el correo con el nombre de tu negocio,
+            publicar la web y el código QR para tu local. Tú no tocas nada.
+          </p>
+        </article>
+
+        <article class="tarjeta aparece">
+          <span class="tarjeta__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M5 4.5v6M5 14.5v5M12 4.5v3M12 11.5v8M19 4.5v9M19 17.5v2"/>
+              <circle cx="5" cy="12.5" r="2"/>
+              <circle cx="12" cy="9.5" r="2"/>
+              <circle cx="19" cy="15.5" r="2"/>
+            </svg>
+          </span>
+          <h3 class="tarjeta__titulo">Herramientas a medida</h3>
+          <p class="tarjeta__texto">
+            ¿Necesitas algo más que una web? Un sistema de pedidos, un control de almacén,
+            una herramienta interna para tu equipo. Cuéntanos qué te hace falta y vemos juntos
+            si podemos hacerlo.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. Cómo trabajamos ===================== -->
+  <section class="seccion" id="como-trabajamos">
+    <div class="contenedor">
+
+      <div class="aparece">
+        <span class="antetitulo">Cómo trabajamos</span>
+        <h2 class="titular-seccion">Cinco pasos, y ninguno lo das tú.</h2>
+      </div>
+
+      <ol class="pasos">
+
+        <li class="paso aparece">
+          <span class="paso__numero" aria-hidden="true">1</span>
+          <h3 class="paso__titulo">Hablamos</h3>
+          <p class="paso__texto">
+            Nos cuentas a qué se dedica tu negocio, qué quieres conseguir y qué te gusta.
+            Sin compromiso y sin palabras raras.
+          </p>
+        </li>
+
+        <li class="paso aparece">
+          <span class="paso__numero" aria-hidden="true">2</span>
+          <h3 class="paso__titulo">Creamos tu identidad</h3>
+          <p class="paso__texto">
+            Si aún no tienes logo ni colores definidos, los diseñamos.
+            Si ya los tienes, respetamos tu marca y trabajamos con ella.
+          </p>
+        </li>
+
+        <li class="paso aparece">
+          <span class="paso__numero" aria-hidden="true">3</span>
+          <h3 class="paso__titulo">Diseñamos la web</h3>
+          <p class="paso__texto">
+            Estructura, textos y diseño pensados para tu negocio. Te enseñamos el avance
+            y ajustamos lo que haga falta antes de publicar nada.
+          </p>
+        </li>
+
+        <li class="paso aparece">
+          <span class="paso__numero" aria-hidden="true">4</span>
+          <h3 class="paso__titulo">La publicamos y conectamos tu dominio</h3>
+          <p class="paso__texto">
+            Nos encargamos del dominio, del correo y de todo lo técnico.
+            Esta parte no la tienes que entender: para eso estamos nosotros.
+          </p>
+        </li>
+
+        <li class="paso aparece">
+          <span class="paso__numero" aria-hidden="true">5</span>
+          <h3 class="paso__titulo">Te la entregamos funcionando</h3>
+          <p class="paso__texto">
+            Tu web online, rápida y bien vista en móvil y en ordenador. A partir de ahí
+            decides si prefieres llevarla tú o que sigamos nosotros.
+          </p>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== 5. Trabajos (solo la llamada) ===================== -->
+  <section class="seccion" id="trabajos">
+    <div class="contenedor">
+
+      <div class="franja centrado aparece">
+        <span class="antetitulo">Trabajos</span>
+        <h2 class="titular-seccion">¿Quieres ver cómo han quedado otras webs?</h2>
+        <p class="entradilla">
+          Cada negocio con el que hemos trabajado tiene la suya hecha desde cero,
+          con su propia marca y su propio estilo.
+        </p>
+        <a class="boton boton--principal franja__boton" href="trabajos.html">Ver todos los trabajos</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== 6. Dos formas de trabajar ===================== -->
+  <section class="seccion" id="formas">
+    <div class="contenedor">
+
+      <div class="aparece">
+        <span class="antetitulo">Cómo lo hacemos</span>
+        <h2 class="titular-seccion">Dos formas de trabajar. Eliges tú.</h2>
+        <p class="entradilla">
+          No ponemos tarifas cerradas porque no hay dos negocios iguales: no cuesta lo mismo
+          una web de cinco secciones que una tienda con catálogo. Lo hablamos, y antes de
+          empezar tienes un precio claro.
+        </p>
+      </div>
+
+      <div class="rejilla-2">
+
+        <article class="tarjeta modalidad aparece">
+          <span class="modalidad__etiqueta">Pago único</span>
+          <h3 class="modalidad__titulo">Te la entregamos y es tuya</h3>
+          <p class="modalidad__texto">
+            Pagas una vez. La web queda publicada, con tu dominio y tus cuentas a tu nombre.
+            Te explicamos cómo funciona todo y, a partir de ahí, es completamente tuya.
+          </p>
+          <ul class="lista-marcas">
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3.5 9.5 7 13l7.5-8"/>
+              </svg>
+              <span>El dominio lo pagas y lo controlas tú</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3.5 9.5 7 13l7.5-8"/>
+              </svg>
+              <span>Te acompañamos en la puesta en marcha</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3.5 9.5 7 13l7.5-8"/>
+              </svg>
+              <span>Sin cuotas ni permanencia</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="tarjeta modalidad aparece">
+          <span class="modalidad__etiqueta">Pago inicial + mensual</span>
+          <h3 class="modalidad__titulo">Nos encargamos de todo</h3>
+          <p class="modalidad__texto">
+            Pagas la creación de la web y después una cuota mensual. Nosotros nos ocupamos
+            de que todo siga funcionando y de los cambios que vayan surgiendo.
+          </p>
+          <ul class="lista-marcas">
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3.5 9.5 7 13l7.5-8"/>
+              </svg>
+              <span>Dominio, correo y copias de seguridad incluidos</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3.5 9.5 7 13l7.5-8"/>
+              </svg>
+              <span>Cambios de horarios, fotos, precios o textos</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3.5 9.5 7 13l7.5-8"/>
+              </svg>
+              <span>Nos escribes y lo hacemos nosotros</span>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <p class="nota-centrada aparece">
+        ¿No sabes cuál te encaja? Escríbenos y lo vemos juntos, sin compromiso.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ===================== 7. Contacto ===================== -->
+  <section class="seccion" id="contacto">
+    <div class="contenedor">
+
+      <div class="aparece">
+        <span class="antetitulo">Contacto</span>
+        <h2 class="titular-seccion">Cuéntanos qué necesitas.</h2>
+        <p class="entradilla">
+          Rellena esto en un minuto y te contestamos por correo.
+          No hace falta que lo tengas todo claro todavía.
+        </p>
+      </div>
+
+      <div class="contacto__caja aparece">
+
+        <form id="formulario-contacto" novalidate="false">
+
+          <div class="campo">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name"
+                   placeholder="Cómo te llamas">
+          </div>
+
+          <div class="campo">
+            <label for="negocio">Nombre de tu negocio</label>
+            <input type="text" id="negocio" name="negocio" required autocomplete="organization"
+                   placeholder="Cómo se llama tu negocio">
+          </div>
+
+          <div class="campo">
+            <label for="servicio">¿Qué necesitas?</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>Elige una opción</option>
+              <option>Una página web</option>
+              <option>Logo e identidad de marca</option>
+              <option>Una herramienta a medida</option>
+              <option>Aún no lo tengo claro</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="extra">Cuéntanos un poco más <span class="campo__opcional">(opcional)</span></label>
+            <textarea id="extra" name="extra" maxlength="600"
+                      placeholder="A qué te dedicas, qué te gustaría conseguir..."></textarea>
+          </div>
+
+          <div class="contacto__envio">
+            <p class="aviso-correo">
+              Al pulsar se abrirá tu programa de correo con el mensaje ya escrito.
+              Solo tendrás que darle a enviar.
+            </p>
+            <button class="boton boton--principal" type="submit">Preparar el correo</button>
+          </div>
+
+        </form>
+
+        <div class="plan-b">
+          <p class="plan-b__texto">O escríbenos directamente a</p>
+          <div class="plan-b__fila">
+            <a class="plan-b__correo" id="correo-codelia" href="mailto:info@codeliadigital.com">info@codeliadigital.com</a>
+            <button class="boton-copiar" id="boton-copiar" type="button"
+                    data-correo="info@codeliadigital.com" aria-live="polite">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3.5 9.5 7 13l7.5-8"/>
+              </svg>
+              <span id="boton-copiar-texto">Copiar</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== 8. Pie de página ===================== -->
+<footer class="pie">
+  <div class="contenedor">
+
+    <div class="pie__columnas">
+
+      <div class="pie__marca">
+        <img class="pie__logo" src="img/codelia-logo-blanco.webp" width="614" height="427"
+             alt="Codelia" loading="lazy" decoding="async">
+        <p class="pie__lema">
+          Diseñamos y publicamos la web de tu negocio, y nos encargamos
+          de toda la parte técnica.
+        </p>
+      </div>
+
+      <nav class="pie__bloque" aria-labelledby="pie-secciones">
+        <h2 class="pie__encabezado" id="pie-secciones">Secciones</h2>
+        <ul class="pie__lista">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+          <li><a href="trabajos.html">Trabajos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="pie__bloque">
+        <h2 class="pie__encabezado">Contacto</h2>
+        <p class="pie__correo"><a href="mailto:info@codeliadigital.com">info@codeliadigital.com</a></p>
+        <a class="pie__destacado" href="#contacto">
+          Cuéntanos tu proyecto
+          <svg width="17" height="12" viewBox="0 0 17 12" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true" focusable="false">
+              <path d="M1 6h14M10.5 1.5 15 6l-4.5 4.5"/>
+            </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="pie__franja">© 2026 Codelia</div>
+
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Codelia",
+  "description": "Diseño y creación de páginas web para negocios",
+  "email": "info@codeliadigital.com",
+  "url": "https://codeliadigital.com",
+  "logo": "https://codeliadigital.com/img/codelia-logo.webp"
+}
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
