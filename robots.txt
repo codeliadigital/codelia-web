@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.codeliadigital.com/sitemap.xml
+Sitemap: https://codeliadigital.com/sitemap.xml
