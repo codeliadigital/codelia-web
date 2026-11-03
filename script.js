@@ -6,7 +6,7 @@
   'use strict';
 
   // Número de WhatsApp de empresa (con el 34 delante, sin espacios ni +)
-  var WHATSAPP = 'NUMERO_WHATSAPP';
+  var WHATSAPP = '34624193989';
 
   /* ----------------------------------------------------------------------
      1. Cabecera: transparente arriba, con fondo crema al bajar
