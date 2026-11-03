@@ -724,9 +724,16 @@ a { color: var(--azul-hondo); text-decoration-thickness: 1px; text-underline-off
   max-width: 58ch;
 }
 
-.contacto__envio .boton { width: 100%; }
+.contacto__botones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contacto__botones .boton { width: 100%; }
+.contacto__botones .boton svg { width: 20px; height: 20px; flex: none; }
 @media (min-width: 560px) {
-  .contacto__envio .boton { width: auto; min-width: 230px; }
+  .contacto__botones { flex-direction: row; flex-wrap: wrap; }
+  .contacto__botones .boton { width: auto; min-width: 230px; }
 }
 
 .plan-b {
@@ -756,6 +763,9 @@ a { color: var(--azul-hondo); text-decoration-thickness: 1px; text-underline-off
   word-break: break-word;
 }
 .plan-b__correo:hover { border-bottom-color: var(--azul-hondo); }
+
+.plan-b__whatsapp { display: inline-flex; align-items: center; gap: 10px; }
+.plan-b__whatsapp svg { width: 20px; height: 20px; flex: none; }
 
 .boton-copiar {
   display: inline-flex;
@@ -835,6 +845,7 @@ a { color: var(--azul-hondo); text-decoration-thickness: 1px; text-underline-off
   word-break: break-word;
 }
 .pie__correo a:hover { border-bottom-color: #fff; }
+.pie__whatsapp { margin-top: 10px; }
 
 .pie__destacado {
   display: inline-flex;
@@ -886,3 +897,31 @@ a { color: var(--azul-hondo); text-decoration-thickness: 1px; text-underline-off
     transition-duration: .01ms !important;
   }
 }
+
+/* --- Botón flotante de WhatsApp ------------------------------------------- */
+.flotante {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--azul-hondo);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(19, 42, 52, .28);
+  transition: transform var(--transicion), background-color var(--transicion),
+              opacity .3s ease, visibility .3s ease;
+}
+.flotante:hover { background: #17475B; transform: translateY(-3px); }
+.flotante:focus-visible { outline: 2px solid var(--azul-hondo); outline-offset: 4px; }
+.flotante svg { width: 27px; height: 27px; flex: none; }
+
+/* Se esconde en el formulario y en el pie, donde ya están el WhatsApp y el correo */
+.flotante--oculto { opacity: 0; visibility: hidden; pointer-events: none; }
+
+@media (min-width: 900px) { .flotante { right: 28px; bottom: 28px; } }
+@media (prefers-reduced-motion: reduce) { .flotante { transition: none; } }

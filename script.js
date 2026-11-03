@@ -5,6 +5,9 @@
 (function () {
   'use strict';
 
+  // Número de WhatsApp de empresa (con el 34 delante, sin espacios ni +)
+  var WHATSAPP = 'NUMERO_WHATSAPP';
+
   /* ----------------------------------------------------------------------
      1. Cabecera: transparente arriba, con fondo crema al bajar
      ---------------------------------------------------------------------- */
@@ -90,19 +93,49 @@
   }
 
   /* ----------------------------------------------------------------------
-     4. Formulario: no envía nada. Redacta el correo y abre el programa
-        de correo de la propia persona con el mensaje ya escrito.
+     4. Formulario: no envía nada. Redacta el mensaje y abre el WhatsApp
+        o el programa de correo de la propia persona con todo ya escrito.
      ---------------------------------------------------------------------- */
   var form = document.getElementById('formulario-contacto');
 
   if (form) {
+    // Qué botón se pulsó (WhatsApp o correo); e.submitter no existe en navegadores antiguos
+    var canal = 'correo';
+    form.addEventListener('click', function (e) {
+      var pulsado = e.target.closest('[data-canal]');
+      if (pulsado) { canal = pulsado.getAttribute('data-canal'); }
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (e.submitter && e.submitter.getAttribute('data-canal')) {
+        canal = e.submitter.getAttribute('data-canal');
+      }
 
       var nombre   = form.nombre.value.trim();
       var negocio  = form.negocio.value.trim();
       var servicio = form.servicio.value;
       var extra    = form.extra.value.trim();
+
+      if (canal === 'whatsapp') {
+        var mensaje =
+          'Hola, Codelia. Os escribo desde vuestra web.\n\n' +
+          '*Nombre:* ' + nombre + '\n' +
+          '*Negocio:* ' + negocio + '\n' +
+          '*Lo que necesito:* ' + servicio +
+          (extra ? '\n\n' + extra : '') +
+          '\n\nGracias.';
+
+        // Un enlace en pestaña nueva: en el móvil abre la app y en el ordenador WhatsApp Web
+        var enlace = document.createElement('a');
+        enlace.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(mensaje);
+        enlace.target = '_blank';
+        enlace.rel = 'noopener';
+        document.body.appendChild(enlace);
+        enlace.click();
+        document.body.removeChild(enlace);
+        return;
+      }
 
       var asunto = 'Nuevo proyecto — ' + negocio;
       var cuerpo =
@@ -120,7 +153,26 @@
   }
 
   /* ----------------------------------------------------------------------
-     5. Botón de copiar la dirección de correo
+     5. Botón flotante de WhatsApp: se esconde en el formulario y en el pie
+     ---------------------------------------------------------------------- */
+  var flotante = document.querySelector('.flotante');
+  var zonas = [document.getElementById('contacto'), document.querySelector('.pie')].filter(Boolean);
+
+  if (flotante && zonas.length && 'IntersectionObserver' in window) {
+    var aLaVista = [];
+    var vigilante = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (entrada) {
+        var i = aLaVista.indexOf(entrada.target);
+        if (entrada.isIntersecting) { if (i < 0) { aLaVista.push(entrada.target); } }
+        else if (i >= 0) { aLaVista.splice(i, 1); }
+      });
+      flotante.classList.toggle('flotante--oculto', aLaVista.length > 0);
+    }, { threshold: 0.15 });
+    zonas.forEach(function (zona) { vigilante.observe(zona); });
+  }
+
+  /* ----------------------------------------------------------------------
+     6. Botón de copiar la dirección de correo
      ---------------------------------------------------------------------- */
   var botonCopiar = document.getElementById('boton-copiar');
   var textoCopiar = document.getElementById('boton-copiar-texto');
