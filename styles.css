@@ -209,6 +209,7 @@ a { color: var(--azul-hondo); text-decoration-thickness: 1px; text-underline-off
   flex: none;
 }
 .marca img { height: 32px; width: auto; }
+.marca__apellido { font-weight: 400; }
 
 .navegacion { display: flex; align-items: center; gap: 34px; }
 
