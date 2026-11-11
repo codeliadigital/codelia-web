@@ -649,6 +649,7 @@ a { color: var(--azul-hondo); text-decoration-thickness: 1px; text-underline-off
 
 /* Antetítulo de la portada: un poco más de aire bajo el logo */
 .portada__antetitulo { margin-bottom: 14px; }
+.portada__antetitulo span { white-space: nowrap; }
 
 /* --- 8. Contacto ---------------------------------------------------------- */
 .contacto__caja {
